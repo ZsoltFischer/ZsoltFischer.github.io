@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Validation</title>
+  <style>
+    form {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      margin: auto;
+    }
+    label {
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"] {
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 12px;
+    }
+    button {
+      background-color: yellow; /* Default color */
+      color: black; /* Default text color */
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: 'Couture', cursive; /* Use Couture font */
+      border-radius: 12px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    button:hover {
+      background-color: #9b59b6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <form action="https://formspree.io/f/xdoqaerv" method="POST" onsubmit="return validateForm()">
+    <label style="margin-bottom: 10px;">
+      <input type="text" name="name" placeholder="Your name" required>
+    </label>
+    <label style="margin-bottom: 10px;">
+      <input type="email" name="email" placeholder="Your email" required>
+    </label>
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      const nameInput = document.getElementsByName("name")[0];
+      const emailInput = document.getElementsByName("email")[0];
+
+      if (nameInput.value === "") {
+        alert("Please enter your name.");
+        return false;
+      }
+
+      if (!validateEmail(emailInput.value)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      return true;
+    }
+
+    function validateEmail(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))\$/;
+      return re.test(String(email).toLowerCase());
+    }
+  </script>
+</body>
+</html>
