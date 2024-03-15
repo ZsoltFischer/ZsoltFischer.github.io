@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Scene-Inquiry</title>
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/OwlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel/owl.theme.default.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/Favicon.svg">
+    
+</head>
+<body>
+
+<!-- PARALLAX-ANIMATION -->
+<div class="background"></div>
+<div class="mid"></div>
+<div class="foreground"></div>
+
+<!--##################################### HEADER-SECTION-START #####################################-->
+<script src="header.js"></script>
+<!--##################################### HEADER-SECTION-END #####################################-->
+
+<!--##################################### BANNER-SECTION-START #####################################-->
+<section class="banner-section repair-banner scene-banner" style="overflow: hidden;">
+    <div class="container container-1200">
+
+        <div class="row align-center">
+            <div class="col-lg-5 col-md-6">
+                <div class="banner-text">
+                    <h1 class="d-md-block d-none slide-right">Scene investigation</h1>
+                    <p class="slide-right-fast pe-lg-4 d-lg-block d-none">Our Scene investigation project captures data with a "Spot" robot dog equipped 
+                        with a 360 camera. This advanced technology captures comprehensive data for remote evaluation. Utilizing VR headsets, users can 
+                        seamlessly immerse themselves in the scene, making informed decisions and assessments. The combination of robotic capability and 
+                        immersive visualization enhances the efficiency and accuracy of investigations, redefining the landscape of scene analysis for 
+                        various applications.</p>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-6 order-first order-md-last">
+                <div class="banner-image text-end position-relative">
+                    <img src="assets/images/scene_investigation_cover.png" alt="b-img" class="img-fluid slide-left" />
+                    <div class="banner-text p-0">
+                        <h1 class="d-md-none d-block slide-right">Scene<br> investigation</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="repair-assistant-text d-lg-none d-block">
+            <p>Our Scene investigation project captures data with a "Spot" robot dog equipped with a 360 camera. This advanced technology 
+                captures comprehensive data for remote evaluation. Utilizing VR headsets, users can seamlessly immerse themselves in the 
+                scene, making informed decisions and assessments. The combination of robotic capability and immersive visualization enhances 
+                the efficiency and accuracy of investigations, redefining the landscape of scene analysis for various applications.</p>
+        </div>
+
+    </div>
+</section>
+<!--##################################### BANNER-SECTION-END #####################################-->
+
+<!--##################################### GALLERY-SECTION-START #####################################-->
+<section class="gallery-section dark-blue pt-86">
+    <div class="container container-1200">
+
+        <div class="gallery-head">
+            <h2>Gallery</h2>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="slider-image">
+                    <img src="assets/images/scene_investigation_1.png" alt="slider-img" class="img-fluid" />
+                </div>
+                <div class="slider-image">
+                    <img src="assets/images/scene_investigation_2.png" alt="slider-img" class="img-fluid" />
+                </div>
+                <div class="slider-image">
+                    <img src="assets/images/scene_investigation_3.png" alt="slider-img" class="img-fluid" />
+                </div>
+                <div class="slider-image">
+                    <img src="assets/images/scene_investigation_4.png" alt="slider-img" class="img-fluid" />
+                </div>
+            </div>
+            <!-- <div class="item">
+                <div class="slider-image">
+                    <img src="assets/images/scene-slider1.png" alt="slider-img" class="img-fluid" />
+                </div>
+                <div class="slider-image">
+                    <img src="assets/images/scene-slider2.png" alt="slider-img" class="img-fluid" />
+                </div>
+                <div class="slider-image">
+                    <img src="assets/images/scene-slider1.png" alt="slider-img" class="img-fluid" />
+                </div>
+                <div class="slider-image">
+                    <img src="assets/images/scene-slider2.png" alt="slider-img" class="img-fluid" />
+                </div>
+            </div> -->
+        </div>
+
+        <div class="slider-bottom-images d-md-block d-none">
+            <img src="assets/images/o-ai.svg" alt="img" class="img-fluid" />
+            <img src="assets/images/o-ra.svg" alt="img" class="img-fluid" />
+        </div>
+
+    </div>
+</section>
+<!--##################################### GALLERY-SECTION-END #####################################-->
+
+<!--##################################### CONTACT-SECTION-START #####################################-->
+<div id="contact-section-container"></div>
+  
+<script src="contact-section.js"></script>
+
+<script>
+  insertContactSection("contact-section-container");
+</script>
+<!--##################################### CONTACT-SECTION-END #####################################-->
+
+<!--##################################### FOOTER-SECTION-START #####################################-->
+<script src="footer.js"></script>
+<!--##################################### FOOTER-SECTION-END #####################################-->
+
+<script src="assets/bootstrap/js/bootstrap.js"></script>
+<script src="assets/OwlCarousel/jquery.min.js"></script>
+<script src="assets/OwlCarousel/owl.carousel.min.js"></script>
+
+<script>
+    $('.owl-carousel').owlCarousel({
+    loop:false,
+    dots:true,
+    nav:false,
+    margin:40,
+    autoplay:true,
+    autoplayTimeout:3000,
+    slideBy:1,
+    responsive:{
+        0:{
+            items:1,
+            margin:15,
+            autoplay:false,
+        },
+        768:{
+            items:1,
+            margin:30,
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+</script>
+
+</body>
+</html>

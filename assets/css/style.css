@@ -1,0 +1,1989 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+body {
+    color: #EBEBEB;
+    background-color: #111111;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: normal;
+}
+
+p.no-padding-margin {
+    padding: 0;
+    margin: 0;
+}
+
+.justified-left {
+    text-align: justify;
+}
+
+
+
+/* CONTAINERS-WIDTH */
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .container-1200,
+    .container-920 {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    body.bg-image {
+        background-image: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .container-1200,
+    .container-920 {
+        max-width: 738px;
+    }
+
+    body.bg-image {
+        background-image: none;
+    }
+}
+
+@media (min-width: 1299px) {
+    .container-1200 {
+        max-width: 1200px;
+    }
+
+    .container-920 {
+        max-width: 920px;
+    }
+}
+
+/* ALL-COLORS */
+.brownish-red {
+    border: 1px solid rgba(245, 0, 141, 0.30);
+    background: linear-gradient(135deg, rgba(255, 0, 147, 0.30) 0%, rgba(200, 0, 115, 0.18) 41.67%, rgba(72, 0, 42, 0.12) 100%);
+}
+
+.dark-blue {
+    border: 1px solid rgb(0, 71, 255, 0.30);
+    background: linear-gradient(135deg, rgba(0, 71, 255, 0.60) 0%, rgba(0, 57, 205, 0.60) 56.94%, rgba(0, 23, 83, 0.60) 100%);
+}
+
+.dark-purple {
+    border: 1px solid rgba(141, 0, 255, 0.30);
+    background: linear-gradient(135deg, rgba(141, 0, 255, 0.30) 0%, rgba(111, 0, 200, 0.18) 41.67%, rgba(49, 1, 89, 0.12) 100%);
+}
+
+.dark-yellow {
+    border: 1px solid rgb(245, 215, 84, 0.30);
+    background: linear-gradient(135deg, rgba(245, 215, 84, 0.60) 0%, rgba(206, 134, 6, 0.60) 37.15%, rgba(37, 60, 0, 0.60) 100%);
+}
+
+.skyblue {
+    border: 1px solid rgb(0, 179, 255, 0.30);
+    background: linear-gradient(135deg, rgba(0, 179, 255, 0.60) 0%, rgba(0, 130, 184, 0.60) 46.88%, rgba(0, 47, 67, 0.60) 100%);
+}
+
+
+/* OWL-CAROUSEL */
+@media (max-width:767px) {
+    .owl-item .item {
+        flex-wrap: wrap;
+    }
+
+    .slider-image {
+        width: 45%;
+        margin-right: 15px;
+        max-width: 200px;
+        max-height: 200px;
+
+    }
+
+    .slider-image img {
+        width: 100% !important;
+        margin-bottom: 15px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+}
+
+@media (min-width:768px) and (max-width: 1199px) {
+    .slider-image img {
+        width: 90% !important;
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider-image {
+        margin-right: 85px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .slider-image:last-child {
+        margin-right: 0px;
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+.owl-item .item {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* ANIMATION-FOR-BANNER-SECTION */
+.slide-right {
+    animation: 2s slide-right;
+}
+
+@keyframes slide-right {
+    from {
+        margin-left: -200%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    @keyframes slide-right {
+        from {
+            margin-left: -100%;
+            width: 100%;
+            transform: scale(0);
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+            transform: scale(1);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .slide-right-fast {
+        animation: 2.3s slide-right-fast;
+    }
+
+    @keyframes slide-right-fast {
+        from {
+            margin-left: -200%;
+            width: 100%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+}
+
+.slide-left {
+    animation: 2s slide-left;
+}
+
+@keyframes slide-left {
+    from {
+        margin-right: -200%;
+        transform: scale(0);
+    }
+
+    to {
+        margin-right: 0%;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 767px) {
+    .slide-left {
+        animation: unset;
+    }
+}
+
+
+/* PARALLAX-ANIMATION */
+:root {
+    --translate: 100px;
+}
+
+.background,
+.mid,
+.foreground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background {
+    background-image: url(../images/v-small-logo.svg);
+    background-size: cover;
+}
+
+.mid {
+    background-image: url(../images/small-logo.svg);
+    background-size: cover;
+}
+
+.foreground {
+    background-image: url(../images/v-small-logo.svg);
+    background-size: contain;
+}
+
+.background {
+    --translate: 200px;
+}
+
+.foreground {
+    --translate: 500px;
+}
+
+@media (min-width: 992px) {
+    @media (prefers-reduced-motion: no-preference) {
+
+        .background,
+        .mid,
+        .foreground {
+            height: calc(100% + var(--translate));
+            animation: parallax linear;
+            animation-timeline: scroll(root);
+        }
+    }
+
+    @keyframes parallax {
+        from {
+            transform: 0;
+        }
+
+        to {
+            transform: translateY(calc(var(--translate) * -1));
+        }
+    }
+}
+
+
+/*########################################################## HOME-PAGE-CSS-START ##########################################################*/
+
+/*################################# HEADER-CSS-START ##################################*/
+section.header-section .header-logo img {
+    width: 100%;
+    max-width: 135px;
+}
+
+section.header-section .header-menu ul li a {
+    color: #EBEBEB;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 767px) {
+    section.header-section .header-logo img {
+        max-width: 90px;
+    }
+
+    section.header-section .header-menu {
+        position: absolute;
+        top: -16px;
+        left: 0;
+        right: 0;
+        background-color: #3A3A38;
+        z-index: 99;
+        border-radius: 0 0 0 20px;
+        padding: 16px 24px 25px 24px;
+        width: 100%;
+        max-width: 175px;
+        margin-left: auto;
+        text-align: right;
+        border: 1px solid #ebebeb77;
+        box-shadow: 0px 0px 70px 0px #111 inset;
+    }
+
+    section.header-section .header-menu ul {
+        max-width: 490px;
+        margin: auto;
+    }
+
+    section.header-section .header-menu ul li a {
+        font-size: 14px;
+        padding: 16px 0;
+    }
+
+    section.header-section button.mobile-toggle {
+        position: absolute;
+        right: 25px;
+    }
+
+    section.header-section button:focus {
+        box-shadow: none !important;
+    }
+
+    section.header-section button.top-spc {
+        margin-top: 2px;
+    }
+
+    section.header-section .justify-center {
+        position: relative;
+        justify-content: center !important;
+    }
+}
+
+/*################################# HEADER-CSS-END ##################################*/
+
+/*################################# BANNER-CSS-START ##################################*/
+section.banner-section .banner-text {
+    padding-top: 120px;
+}
+
+section.banner-section .banner-text h1 {
+    font-size: 90px;
+    font-family: "Anton", sans-serif;
+    line-height: 120px;
+    margin-bottom: 70px;
+}
+
+section.banner-section .banner-text p {
+    font-family: "Work Sans", sans-serif;
+    text-align: justify;
+}
+
+section.banner-section .banner-text p.justify-not {
+    font-size: 14px;
+    text-align: left;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section .banner-text {
+        padding-top: 0px;
+    }
+
+    section.banner-section .banner-text.center {
+        text-align: center;
+    }
+
+    section.banner-section .banner-text h1 {
+        font-size: 42px;
+        margin-bottom: 0px;
+        line-height: 48px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: min-content;
+        text-align: left;
+        text-shadow: 0px 0px 10px #111111;
+    }
+
+    section.banner-section .banner-text p {
+        font-size: 14px;
+        text-align: center !important;
+        margin-top: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.banner-section .banner-text {
+        padding-top: 0px;
+    }
+
+    section.banner-section .banner-text h1 {
+        font-size: 80px;
+        margin-bottom: 48px;
+        line-height: 90px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    section.banner-section .banner-text {
+        padding-top: 50px;
+    }
+
+    section.banner-section .banner-text h1 {
+        font-size: 55px;
+        margin-bottom: 48px;
+        line-height: 70px;
+    }
+}
+
+/*################################# BANNER-CSS-END ##################################*/
+
+/*################################# FEATURE-CSS-START ##################################*/
+section.feature-section {
+    padding: 64px 0;
+}
+
+section.feature-section .cards {
+    width: 210px;
+    height: 210px;
+    perspective: 500px;
+}
+
+section.feature-section .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 1s;
+    border-radius: 40px;
+    transform-style: preserve-3d;
+    box-shadow: 0px 20px 40px 0px rgba(171, 171, 171, 0.20);
+}
+
+section.feature-section .cards:hover .content {
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+}
+
+section.feature-section .front,
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: #03446A;
+    text-align: center;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+section.feature-section .back {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+section.feature-section .flip-back-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 5px;
+    text-align: center;
+}
+
+section.feature-section .flip-back-content h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+section.feature-section .flip-back-content a {
+    font-size: 12px;
+    color: #EBEBEB;
+    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
+    padding: 8px 44px;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    transition: .4s;
+}
+
+section.feature-section .flip-back-content a:hover {
+    box-shadow: 2px 2px 10px 0px rgba(235, 235, 235, 0.25);
+}
+
+section.feature-section .flip-back-content a:focus {
+    box-shadow: 2px 2px 10px 0px rgba(235, 235, 235, 0.25) inset;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .feature-mobile-view {
+        width: 100%;
+        max-width: 330px;
+        margin: auto;
+    }
+
+    .mobile-card-image:nth-child(3) img,
+    .mobile-card-image:last-child img {
+        margin-right: 0;
+    }
+
+    .mobile-card-image img {
+        width: 100%;
+        max-width: 93px;
+        margin: 0 16px 16px 0;
+        box-shadow: 0px 8.455px 16.909px 0px rgba(171, 171, 171, 0.20);
+        border-radius: 16px;
+    }
+
+    section.feature-section {
+        padding: 40px 0 48px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.feature-section {
+        padding: 48px 0;
+    }
+
+    section.feature-section .cards {
+        width: 135px;
+        height: 135px;
+    }
+
+    section.feature-section .content {
+        border-radius: 25px;
+    }
+
+    section.feature-section .flip-back-content h2 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    section.feature-section .flip-back-content {
+        padding: 22px 5px;
+    }
+
+    section.feature-section .flip-back-content a {
+        padding: 6px 16px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    section.feature-section .cards {
+        width: 160px;
+        height: 160px;
+    }
+
+    section.feature-section .content {
+        border-radius: 30px;
+    }
+
+    section.feature-section .flip-back-content {
+        padding: 18px 5px;
+    }
+
+    section.feature-section .flip-back-content h2 {
+        font-size: 26px;
+        margin-bottom: 35px;
+    }
+
+    section.feature-section .flip-back-content a {
+        font-size: 12px;
+        padding: 6px 30px;
+    }
+}
+
+/*################################# FEATURE-CSS-END ##################################*/
+
+/*################################# ABOUT-CSS-START ##################################*/
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+section.about-section .about-head {
+    margin-bottom: 64px;
+}
+
+section.about-section .about-head h2 {
+    font-size: 48px;
+    font-family: "Anton", sans-serif;
+    margin-bottom: 24px;
+}
+
+section.about-section .about-head p {
+    text-align: justify;
+    font-family: "Work Sans", sans-serif;
+}
+
+section.about-section .about-cards {
+    padding: 24px;
+    border-radius: 40px 0px;
+    opacity: 0.8;
+    box-shadow: 0px 20px 40px 0px rgba(171, 171, 171, 0.20);
+    margin-bottom: 24px;
+}
+
+section.about-section .about-cards .about-card-text h2 {
+    font-size: 36px;
+    font-family: "Anton", sans-serif;
+    margin-bottom: 24px;
+}
+
+section.about-section .about-cards .about-card-text p {
+    margin-bottom: 32px;
+    text-align: justify;
+}
+
+section.about-section .about-cards .about-card-small-images img {
+    width: 100%;
+    max-width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 8px;
+    filter: opacity(0.5);
+    box-shadow: inset 1px 0px 40px 5px #ffffff29;
+}
+
+section.about-section .about-cards .about-card-btn a {
+    color: #EBEBEB;
+    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
+    letter-spacing: 2px;
+    padding: 7px 17px;
+    border-radius: 20px;
+    transition: .4s;
+}
+
+section.about-section .about-cards .about-card-btn a:hover {
+    box-shadow: 2px 2px 10px 0px rgba(235, 235, 235, 0.25);
+}
+
+section.about-section .about-cards .about-card-btn a:focus {
+    box-shadow: 2px 2px 10px 0px rgba(235, 235, 235, 0.25) inset;
+}
+
+section.about-section .about-cards.dark-blue .about-card-text p,
+section.about-section .about-cards.dark-yellow .about-card-text p,
+section.about-section .about-cards.skyblue .about-card-text p {
+    margin-bottom: 12px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.about-section .about-head {
+        margin-bottom: 48px;
+    }
+
+    section.about-section .about-head h2 {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    section.about-section .about-head p {
+        font-size: 14px;
+    }
+
+    section.about-section .about-second-heading h2 {
+        font-size: 32px;
+        font-family: "Anton", sans-serif;
+        margin-bottom: 32px;
+    }
+
+    section.about-section .about-cards {
+        padding: 16px;
+        border-radius: 32px 0px
+    }
+
+    section.about-section .about-cards .about-card-text h2 {
+        font-size: 24px;
+    }
+
+    section.about-section .about-cards .about-card-text p {
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+
+    section.about-section .about-cards .about-card-small-images img {
+        max-width: 32px;
+        height: 32px;
+        margin-right: 5px;
+        border-radius: 5px;
+    }
+
+    section.about-section .about-cards .about-card-btn a {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    section.about-section .about-cards.dark-blue .about-card-text p,
+    section.about-section .about-cards.dark-yellow .about-card-text p,
+    section.about-section .about-cards.skyblue .about-card-text p {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.about-section .about-head {
+        margin-bottom: 48px;
+    }
+
+    section.about-section .about-head h2 {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+
+    section.about-section .about-head p {
+        font-size: 14px;
+    }
+
+    section.about-section .about-second-heading h2 {
+        font-size: 40px;
+        font-family: "Anton", sans-serif;
+        margin-bottom: 32px;
+    }
+
+    section.about-section .about-cards {
+        padding: 16px;
+        border-radius: 20px 0px
+    }
+
+    section.about-section .about-cards .about-card-text h2 {
+        font-size: 24px;
+    }
+
+    section.about-section .about-cards .about-card-text p {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    section.about-section .about-cards .about-card-small-images img {
+        max-width: 32px;
+        height: 32px;
+        margin-right: 5px;
+        border-radius: 5px;
+    }
+
+    section.about-section .about-cards .about-card-btn a {
+        padding: 7px 16px;
+        font-size: 14px;
+    }
+
+    section.about-section .about-cards.dark-blue .about-card-text p,
+    section.about-section .about-cards.dark-yellow .about-card-text p,
+    section.about-section .about-cards.skyblue .about-card-text p {
+        margin-bottom: 23px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    section.about-section .about-cards {
+        padding: 16px;
+    }
+
+    section.about-section .about-cards .about-card-text h2 {
+        font-size: 28px;
+    }
+
+    section.about-section .about-cards .about-card-text p {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    section.about-section .about-cards .about-card-small-images img {
+        max-width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        border-radius: 5px;
+    }
+
+    section.about-section .about-cards.dark-blue .about-card-text p,
+    section.about-section .about-cards.dark-yellow .about-card-text p,
+    section.about-section .about-cards.skyblue .about-card-text p {
+        margin-bottom: 23px;
+    }
+}
+
+/*################################# ABOUT-CSS-END ##################################*/
+
+/*################################# CONTACT-CSS-START ##################################*/
+section.contact-section {
+    padding: 120px 0 95px 0;
+}
+
+section.contact-section .contact-head h2 {
+    font-size: 48px;
+    font-family: "Anton", sans-serif;
+    margin-bottom: 48px;
+}
+
+section.contact-section .contact-head p {
+    text-align: justify;
+}
+
+section.contact-section form.contact-form .contact-form-fields input {
+    color: #000;
+    height: 43px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 32px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+section.contact-section form.contact-form .contact-form-fields textarea {
+    color: #000;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 32px;
+    border: none;
+    background-color: #EBEBEB;
+}
+
+section.contact-section form.contact-form .contact-form-fields input::placeholder,
+section.contact-section form.contact-form .contact-form-fields textarea::placeholder {
+    font-size: 16px;
+    font-family: "Work Sans", sans-serif;
+    color: #5D5D5D;
+    letter-spacing: 2px;
+}
+
+section.contact-section form.contact-form .contact-form-fields input:focus,
+section.contact-section form.contact-form .contact-form-fields textarea:focus,
+section.contact-section form.contact-form .contact-btn button:focus {
+    box-shadow: none;
+}
+
+section.contact-section form.contact-form .contact-btn button {
+    color: #EBEBEB;
+    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
+    padding: 5px 68px;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    /* border-color: #1c64f200;
+    background: transparent; */
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    /* border: 1px solid transparent; */
+    transition: .4s;
+}
+
+section.contact-section form.contact-form .contact-btn button:hover {
+    box-shadow: 2px 2px 10px 0px rgba(235, 235, 235, 0.25);
+}
+
+section.contact-section form.contact-form .contact-btn button:focus {
+    box-shadow: 2px 2px 10px 0px rgba(235, 235, 235, 0.25) inset;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.contact-section {
+        padding: 66px 0 64px 0;
+    }
+
+    section.contact-section .contact-head {
+        margin-bottom: 24px;
+    }
+
+    section.contact-section .contact-head h2 {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    section.contact-section .contact-head p {
+        font-size: 14px;
+    }
+
+    section.contact-section form.contact-form .contact-form-fields input {
+        font-size: 14px;
+        height: 33px;
+        margin-bottom: 16px;
+    }
+
+    section.contact-section form.contact-form .contact-form-fields textarea {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    section.contact-section form.contact-form .contact-form-fields input::placeholder,
+    section.contact-section form.contact-form .contact-form-fields textarea::placeholder {
+        font-size: 14px;
+    }
+
+    section.contact-section form.contact-form .contact-btn button {
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.contact-section {
+        padding: 88px 0 96px 0;
+    }
+
+    section.contact-section .contact-head h2 {
+        font-size: 40px;
+    }
+
+    section.contact-section .contact-head p {
+        font-size: 14px;
+    }
+
+    section.contact-section .contact-head {
+        margin-bottom: 30px;
+    }
+
+    section.contact-section form.contact-form .contact-btn button {
+        font-size: 14px;
+    }
+}
+
+/*################################# CONTACT-CSS-END ##################################*/
+
+/*################################# FOOTER-CSS-START ##################################*/
+section.footer-section {
+    padding: 12px 0;
+}
+
+section.footer-section .footer-logo img {
+    width: 100%;
+    max-width: 180px;
+}
+
+section.footer-section .footer-text p {
+    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
+    margin-bottom: 0;
+}
+
+section.footer-section .footer-address p,
+section.footer-section .footer-address a {
+    color: #EBEBEB;
+    font-size: 14px;
+    font-family: "Work Sans", sans-serif;
+    line-height: 16px;
+}
+
+section.footer-section .footer-address a {
+    text-decoration: underline;
+    width: 146px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.footer-section .footer-logo img {
+        max-width: 106px;
+        margin-bottom: 10px;
+    }
+
+    section.footer-section .footer-text p {
+        font-size: 12px;
+    }
+
+    section.footer-section .footer-address p,
+    section.footer-section .footer-address a {
+        font-size: 8px;
+        margin-bottom: 0;
+        line-height: normal;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.footer-section .footer-logo img {
+        max-width: 106px;
+    }
+
+    section.footer-section .footer-text p {
+        font-size: 14px;
+    }
+
+    section.footer-section .footer-address p,
+    section.footer-section .footer-address a {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+
+    section.footer-section .footer-address a {
+        width: 80px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    section.footer-section .footer-text p {
+        font-size: 14px;
+    }
+
+    section.footer-section .footer-address p,
+    section.footer-section .footer-address a {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+}
+
+/*################################# FOOTER-CSS-END ##################################*/
+
+/*########################################################## HOME-PAGE-CSS-END ##########################################################*/
+
+
+
+
+/*########################################################## AI-PAGE-CSS-START ##########################################################*/
+
+/*################################# ARTIFICIAL-BANNER-CSS-START ##################################*/
+section.banner-section.artificial-banner .banner-text {
+    padding-top: 0;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section.artificial-banner .banner-text h1 {
+        top: unset;
+        bottom: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.banner-section.artificial-banner .banner-text h1 {
+        font-size: 72px;
+        margin-bottom: 30px;
+    }
+
+    section.banner-section.artificial-banner .banner-text p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+    section.banner-section.artificial-banner .banner-text h1 {
+        font-size: 72px;
+    }
+}
+
+/*################################# ARTIFICIAL-BANNER-CSS-END ##################################*/
+
+/*################################# WHAT-WE-CSS-START ##################################*/
+section.about-section.what-we-section {
+    padding-top: 64px;
+}
+
+section.about-section.what-we-section .about-cards {
+    padding: 32px;
+}
+
+section.about-section.what-we-section .about-cards .about-card-text h2 {
+    font-size: 40px;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+}
+
+section.about-section.what-we-section .about-cards .about-card-text h2.f-size {
+    font-size: 36px;
+}
+
+section.about-section.what-we-section .about-cards .about-card-text p {
+    font-size: 14px;
+    margin-bottom: 73px;
+}
+
+section.about-section.what-we-section .about-cards .about-card-text p.mb-39 {
+    margin-bottom: 39px;
+}
+
+section.about-section.what-we-section .about-cards .about-card-text p.mb-56 {
+    margin-bottom: 56px;
+}
+
+section.about-section.what-we-section .about-cards .about-card-text p.mb-61 {
+    margin-bottom: 61px;
+}
+
+section.about-section.what-we-section .about-cards .about-card-btn a {
+    padding: 7px 69px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.about-section.what-we-section {
+        padding-top: 48px;
+    }
+
+    section.about-section.what-we-section .about-cards {
+        padding: 16px;
+    }
+
+    section.about-section.what-we-section .about-head {
+        margin-bottom: 32px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text h2,
+    section.about-section.what-we-section .about-cards .about-card-text h2.f-size {
+        font-size: 24px;
+        letter-spacing: 0px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-btn a {
+        padding: 7px 16px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p {
+        margin-bottom: 32px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-39 {
+        margin-bottom: 32px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-56 {
+        margin-bottom: 32px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-61 {
+        margin-bottom: 32px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-mobile-15 {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.about-section.what-we-section {
+        padding-top: 48px;
+    }
+
+    section.about-section.what-we-section .about-cards {
+        padding: 16px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text h2,
+    section.about-section.what-we-section .about-cards .about-card-text h2.f-size {
+        font-size: 24px;
+        letter-spacing: 0px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-btn a {
+        padding: 7px 16px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p {
+        margin-bottom: 40px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-39 {
+        margin-bottom: 23px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-56 {
+        margin-bottom: 23px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-61 {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    section.about-section.what-we-section {
+        padding-top: 48px;
+    }
+
+    section.about-section.what-we-section .about-cards {
+        padding: 16px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text h2,
+    section.about-section.what-we-section .about-cards .about-card-text h2.f-size {
+        font-size: 24px;
+        letter-spacing: 0px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-btn a {
+        font-size: 14px;
+        padding: 7px 16px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p {
+        margin-bottom: 57px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-39 {
+        margin-bottom: 23px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-56 {
+        margin-bottom: 56px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-61 {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+    section.about-section.what-we-section {
+        padding-top: 48px;
+    }
+
+    section.about-section.what-we-section .about-cards {
+        padding: 24px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text h2,
+    section.about-section.what-we-section .about-cards .about-card-text h2.f-size {
+        font-size: 30px;
+    }
+
+    section.about-section.what-we-section .about-cards .about-card-text p.mb-61 {
+        margin-bottom: 56px;
+    }
+
+}
+
+/*################################# WHAT-WE-CSS-END ##################################*/
+
+/*################################# ARTIFICAL-CONTACT-CSS-START ##################################*/
+@media (min-width: 768px) and (max-width: 991px) {
+    section.contact-section.artificial-contact {
+        padding-top: 27px;
+    }
+}
+
+/*################################# ARTIFICAL-CONTACT-CSS-END ##################################*/
+
+/*########################################################## AI-PAGE-CSS-END ##########################################################*/
+
+
+
+
+/*########################################################## MR-PAGE-CSS-START ##########################################################*/
+
+/*################################# MIXED-BANNER-CSS-START ##################################*/
+section.banner-section.mixed-banner .banner-text {
+    padding-top: 100px;
+}
+
+section.banner-section.mixed-banner .banner-text h1 {
+    font-size: 128px;
+    line-height: 150px;
+    margin-bottom: 64px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section.mixed-banner .banner-text {
+        padding-top: 0;
+    }
+
+    section.banner-section.mixed-banner .banner-text h1 {
+        font-size: 42px;
+        line-height: 48px;
+        margin-bottom: 0;
+        top: unset;
+        bottom: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.banner-section.mixed-banner .banner-text {
+        padding-top: 0;
+    }
+
+    section.banner-section.mixed-banner .banner-text h1 {
+        font-size: 72px;
+        line-height: 90px;
+        margin-bottom: 28px;
+    }
+
+    section.banner-section.mixed-banner .banner-text p {
+        font-size: 14px;
+    }
+
+    section.about-section.what-we-section.mixed-page-cards .about-cards .about-card-text p.mb-39 {
+        margin-bottom: 39px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    section.banner-section.mixed-banner .banner-text h1 {
+        font-size: 72px;
+        line-height: 90px;
+        margin-bottom: 28px;
+    }
+
+    section.about-section.what-we-section.mixed-page-cards .about-cards .about-card-text p.mb-39 {
+        margin-bottom: 39px;
+    }
+}
+
+/*################################# MIXED-BANNER-CSS-END ##################################*/
+
+/*################################# MIXED-CONTACT-CSS-START ##################################*/
+section.contact-section.mixed-contact {
+    padding-top: 80px;
+}
+
+/*################################# MIXED-CONTACT-CSS-END ##################################*/
+
+/*########################################################## MR-PAGE-CSS-END ##########################################################*/
+
+
+
+/*########################################################## VR-PAGE-CSS-START ##########################################################*/
+
+/*################################# VIRTUAL-CARDS-CSS-START ##################################*/
+@media (min-width: 320px) and (max-width: 767px) {
+    section.about-section.what-we-section.virtual-page-cards .about-cards .about-card-text p.mb-39 {
+        margin-bottom: 15px;
+    }
+}
+
+/*################################# VIRTUAL-CARDS-CSS-END ##################################*/
+
+/*########################################################## VR-PAGE-CSS-END ##########################################################*/
+
+
+
+/*########################################################## AR-PAGE-CSS-START ##########################################################*/
+
+/*################################# AUGMENTED-BANNER-CSS-START ##################################*/
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section.augmented-banner .banner-text h1 {
+        top: unset;
+        bottom: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.banner-section.augmented-banner .banner-text h1 {
+        font-size: 72px;
+    }
+
+    section.banner-section.augmented-banner .banner-text p {
+        font-size: 14px;
+    }
+}
+
+/*################################# AUGMENTED-BANNER-CSS-END ##################################*/
+
+/*################################# AUGMENTED-CONTACT-CSS-START ##################################*/
+section.contact-section.augmented-contact {
+    padding-top: 176px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.contact-section.augmented-contact {
+        padding-top: 44px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.contact-section.augmented-contact {
+        padding-top: 64px;
+    }
+}
+
+/*################################# AUGMENTED-CONTACT-CSS-END ##################################*/
+
+/*########################################################## AR-PAGE-CSS-END ##########################################################*/
+
+
+
+/*########################################################## R&A-PAGE-CSS-START ##########################################################*/
+
+/*################################# ROBOTICS-BANNER-CSS-START ##################################*/
+section.banner-section.robotics-banner .banner-text {
+    padding-top: 80px;
+}
+
+section.banner-section.robotics-banner .banner-text h1 {
+    font-size: 88px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section.robotics-banner .banner-text h1 {
+        font-size: 42px;
+    }
+
+    section.banner-section.robotics-banner .banner-text {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.banner-section.robotics-banner .banner-text {
+        padding-top: 0;
+    }
+
+    section.banner-section.robotics-banner .banner-text h1 {
+        font-size: 72px;
+    }
+
+    section.banner-section.robotics-banner .banner-text p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1299px) {
+    section.banner-section.robotics-banner .banner-text {
+        padding-top: 0;
+    }
+
+    section.banner-section.robotics-banner .banner-text h1 {
+        font-size: 55px;
+        line-height: 70px;
+    }
+}
+
+/*################################# ROBOTICS-BANNER-CSS-END ##################################*/
+
+/*################################# ROBOTICS-CARDS-CSS-START ##################################*/
+@media (min-width: 320px) and (max-width: 767px) {
+    section.about-section.what-we-section.robotics-page-cards .about-cards .about-card-text p.mb-56 {
+        margin-bottom: 15px;
+    }
+}
+
+/*################################# ROBOTICS-CARDS-CSS-END ##################################*/
+
+/*################################# ROBOTICS-CONTACT-CSS-START ##################################*/
+@media (min-width: 768px) and (max-width: 991px) {
+    section.contact-section.robotics-contact {
+        padding-top: 74px;
+    }
+}
+
+/*################################# ROBOTICS-CONTACT-CSS-END ##################################*/
+
+/*########################################################## R&A-PAGE-CSS-END ##########################################################*/
+
+
+
+
+/*##################################################### REPAIR-ASSISTANT-PAGE-CSS-START ######################################################*/
+
+/*################################# REPAIR-BANNER-CSS-START ##################################*/
+section.banner-section.repair-banner .banner-text h1 {
+    line-height: 150px;
+}
+
+section.banner-section.repair-banner .banner-text h1.repair-title {
+    font-size: 120px;
+}
+
+section.banner-section.repair-banner .repair-assistant-text p {
+    padding: 153px 0 48px 0;
+    text-align: justify;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section.repair-banner .repair-assistant-text p {
+        font-size: 14px;
+        padding: 16px 0 48px 0;
+        margin-bottom: 0;
+    }
+
+    .repair-assistant-text p {
+        text-align: justify;
+        font-size: 14px;
+    }
+
+    section.banner-section.repair-banner .banner-text h1 {
+        top: unset;
+        bottom: 12px;
+        line-height: 48px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.banner-section.repair-banner .banner-text h1 {
+        font-size: 72px;
+        line-height: 90px;
+        margin-bottom: 0;
+    }
+
+    section.banner-section.repair-banner .banner-text h1.repair-title {
+        font-size: 72px;
+    }
+
+    section.banner-section.repair-banner .align-center {
+        align-items: center;
+    }
+
+    section.banner-section.repair-banner .repair-assistant-text p {
+        font-size: 14px;
+        padding: 48px 0 48px 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    section.banner-section.repair-banner .banner-text h1 {
+        line-height: 90px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1299px) {
+    section.banner-section.repair-banner .banner-text h1.repair-title {
+        font-size: 55px;
+        line-height: 90px;
+    }
+}
+
+/*################################# REPAIR-BANNER-CSS-END ##################################*/
+
+/*################################# GALLERY-CSS-START ##################################*/
+section.gallery-section {
+    padding: 24px 0 32px 0;
+    border-radius: 40px 0px;
+    opacity: 0.8;
+    box-shadow: 0px 20px 40px 0px rgba(171, 171, 171, 0.20);
+    /* backdrop-filter: blur(10px); */
+}
+
+section.gallery-section .gallery-head {
+    margin-bottom: 32px;
+}
+
+section.gallery-section .gallery-head h2 {
+    font-size: 48px;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 2px;
+}
+
+section.gallery-section .gallery-slider .slider-image img {
+    width: 100%;
+    max-width: 230px;
+    border-radius: 15px;
+}
+
+.owl-theme .owl-dots {
+    margin-top: 44px !important;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 15px !important;
+    height: 15px !important;
+    margin: 5px 0px 0px 7px !important;
+    background-color: #878787 !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    background-color: #EBEBEB !important;
+}
+
+section.gallery-section .slider-bottom-images {
+    margin-top: 30px;
+}
+
+section.gallery-section .slider-bottom-images img {
+    width: 100%;
+    max-width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 8px;
+    filter: opacity(0.5);
+    box-shadow: inset 1px 0px 40px 5px #ffffff29;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.gallery-section .gallery-head {
+        margin-bottom: 24px;
+    }
+
+    section.gallery-section .gallery-head h2 {
+        font-size: 24px;
+    }
+
+    section.gallery-section {
+        padding: 12px 0 24px 0;
+        border-radius: 32px 0px;
+    }
+
+    .owl-theme .owl-dots {
+        margin-top: 10px !important;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        width: 10px !important;
+        height: 10px !important;
+        margin: 5px 0px 0px 5px !important;
+    }
+
+    section.gallery-section .gallery-slider .slider-image img {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.gallery-section {
+        border-radius: 20px 0px;
+    }
+
+    section.gallery-section .gallery-head {
+        margin-bottom: 24px;
+    }
+
+    section.gallery-section .slider-bottom-images img {
+        max-width: 32px;
+        height: 32px;
+        margin-right: 5px;
+        border-radius: 5px;
+    }
+
+    section.gallery-section .gallery-head h2 {
+        font-size: 24px;
+    }
+
+    section.gallery-section .gallery-slider .slider-image img {
+        max-width: 155px;
+        height: 155px;
+        object-fit: cover;
+    }
+
+    section.gallery-section .slider-bottom-images {
+        margin-top: 20px;
+    }
+}
+
+/*################################# GALLERY-BANNER-CSS-END ##################################*/
+
+/*################################# REPAIR-CONTACT-CSS-START ##################################*/
+section.contact-section.repair-contact {
+    padding: 88px 0 95px 0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.contact-section.repair-contact {
+        padding: 62px 0 95px 0;
+    }
+}
+
+/*################################# REPAIR-CONTACT-CSS-END ##################################*/
+
+/*##################################################### REPAIR-ASSISTANT-PAGE-CSS-END ######################################################*/
+
+
+
+/*##################################################### SCENE-INQUIRY-PAGE-CSS-START ######################################################*/
+
+/*################################# SCENE-INQUIRY-BANNER-CSS-START ##################################*/
+section.banner-section.scene-banner .banner-text h1 {
+    line-height: 120px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.banner-section.scene-banner .align-center {
+        align-items: center;
+    }
+
+    section.banner-section.scene-banner .banner-text h1 {
+        font-size: 64px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1299px) {
+    section.banner-section.scene-banner .banner-text h1 {
+        font-size: 55px;
+        line-height: 60px;
+    }
+}
+
+/*################################# SCENE-INQUIRY-BANNER-CSS-END ##################################*/
+
+/*################################# GALLERY-CSS-START ##################################*/
+@media (min-width: 992px) {
+    section.gallery-section.pt-86 {
+        margin-top: 86px;
+    }
+}
+
+/*################################# GALLERY-CSS-END ##################################*/
+
+/*##################################################### SCENE-INQUIRY-PAGE-CSS-END ######################################################*/
+
+
+
+/*##################################################### OPERATING-PLATFORM-PAGE-CSS-START ######################################################*/
+
+/*################################# OPERATING-PLATFORM-BANNER-CSS-START ##################################*/
+section.banner-section.operate-banner .banner-text h1 {
+    line-height: 120px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section.operating-banner .banner-text h1 {
+        font-size: 42px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    section.banner-section.operating-banner .banner-text h1 {
+        font-size: 85px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1299px) {
+    section.banner-section.operating-banner .banner-text h1 {
+        font-size: 76px;
+    }
+}
+
+/*################################# OPERATING-PLATFORM-BANNER-CSS-END ##################################*/
+
+/*################################# GALLERY-CSS-START ##################################*/
+@media (min-width: 992px) {
+    section.gallery-section.pt-86 {
+        margin-top: 86px;
+    }
+}
+
+/*################################# GALLERY-CSS-END ##################################*/
+
+
+/*##################################################### OPERATING-PLATFORM-PAGE-CSS-END ######################################################*/
+
+
+
+/*##################################################### FORCE-METER-PAGE-CSS-START ######################################################*/
+
+/*################################# FORCE-METER-BANNER-CSS-START ##################################*/
+section.banner-section.force-banner .banner-text h1 {
+    font-size: 90px;
+    line-height: 120px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section.force-banner .banner-text h1 {
+        font-size: 42px;
+    }
+
+    section.banner-section.force-banner .banner-text h1.line-height {
+        line-height: 48px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    section.banner-section.force-banner .banner-text h1 {
+        font-size: 72px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1299px) {
+    section.banner-section.force-banner .banner-text h1 {
+        font-size: 72px;
+    }
+}
+
+/*################################# FORCE-METER-BANNER-CSS-END ##################################*/
+
+/*##################################################### FORCE-METER-PAGE-CSS-END ######################################################*/
+
+
+
+/*##################################################### EEMOTION-RECOGNITION-PAGE-CSS-START ######################################################*/
+
+/*################################# EEMOTION-EXPIRATION-BANNER-CSS-START ##################################*/
+section.banner-section.emotion-banner .banner-text h1 {
+    line-height: 120px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section.emotion-banner .banner-text h1 {
+        line-height: 48px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    section.banner-section.emotion-banner .banner-text h1 {
+        line-height: 90px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1299px) {
+    section.banner-section.emotion-banner .banner-text h1 {
+        line-height: 90px;
+    }
+}
+
+/*################################# EEMOTION-EXPIRATION-BANNER-CSS-END ##################################*/
+
+/*##################################################### EEMOTION-EXPIRATION-PAGE-CSS-END ######################################################*/
+
+
+
+
+/*##################################################### TENDER-REPORTS-PAGE-CSS-START ######################################################*/
+
+/*################################# TENDER-BANNER-CSS-START ##################################*/
+section.banner-section.tender-banner .banner-text {
+    padding-top: 60px;
+}
+
+section.banner-section.tender-banner .banner-text h1 {
+    font-size: 128px;
+    line-height: 150px;
+    margin-bottom: 64px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.banner-section.tender-banner .banner-text {
+        padding-top: 0px;
+    }
+
+    section.banner-section.tender-banner .banner-text h1 {
+        font-size: 42px;
+        line-height: 48px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.banner-section.tender-banner .banner-text {
+        padding-top: 0;
+    }
+
+    section.banner-section.tender-banner .banner-text h1 {
+        font-size: 72px;
+        line-height: 90px;
+        margin-bottom: 48px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    section.banner-section.tender-banner .banner-text h1 {
+        font-size: 55px;
+        line-height: 70px;
+        margin-bottom: 48px;
+    }
+}
+
+/*################################# TENDER-BANNER-CSS-END ##################################*/
+
+/*################################# ACCORDION-CSS-START ##################################*/
+section.accordion-section {
+    padding: 64px 0 45px 0;
+}
+
+section.accordion-section .tender-desktop-text .tender-text {
+    margin-bottom: 83px;
+}
+
+section.accordion-section .tender-desktop-text .tender-text h2 {
+    font-size: 48px;
+    font-family: "Anton", sans-serif;
+    margin-bottom: 48px;
+}
+
+section.accordion-section .tender-desktop-text .tender-text p {
+    text-align: justify;
+}
+
+section.accordion-section .tender-mobile-text .faqs .faqs-item {
+    background-color: transparent;
+}
+
+section.accordion-section .tender-mobile-text .faqs .faqs-item h2.faqs-head button {
+    font-size: 32px;
+    font-family: "Anton", sans-serif;
+    color: #EBEBEB;
+    background-color: transparent;
+    padding: 0;
+}
+
+section.accordion-section .tender-mobile-text .faqs .faqs-item h2.faqs-head button:focus {
+    box-shadow: none;
+}
+
+section.accordion-section .tender-mobile-text .faqs .faqs-item h2.faqs-head button::after {
+    background-image: url(../images/accordion-arrow.svg);
+}
+
+section.accordion-section .tender-mobile-text .faqs .faqs-item {
+    border-bottom: 1px solid #fff !important;
+    border-radius: 0;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+}
+
+section.accordion-section .tender-mobile-text .faqs .faqs-item:last-child {
+    margin-bottom: 0;
+}
+
+section.accordion-section .tender-mobile-text .faqs .faqs-item .faqs-text {
+    padding-top: 24px !important;
+}
+
+section.accordion-section .tender-mobile-text .faqs .faqs-item .faqs-text p.heading {
+    font-size: 16px;
+}
+
+section.accordion-section .tender-mobile-text .faqs .faqs-item .faqs-text p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    section.accordion-section {
+        padding: 48px 0 20px 0;
+    }
+
+    section.accordion-section .tender-mobile-text .faqs .faqs-item {
+        margin-bottom: 34px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    section.accordion-section {
+        padding: 34px 0 57px 0;
+    }
+}
+
+.tender-text img:last-child {
+    display: block;
+    margin: 0 auto;
+}
+
+.tender-mobile-text img:last-child {
+    display: block;
+    margin: 0 auto;
+}
+
+/*################################# ACCORDION-CSS-END ##################################*/
+
+/*##################################################### TENDER-REPORTS-PAGE-CSS-END ######################################################*/
+
+
+
+/*##################################################### PAGE-NOT-FOUND-PAGE-CSS-START ######################################################*/
+
+section.not-found-section {
+    height: calc(100vh - 230px);
+}
+
+section.not-found-section .not-found h2 {
+    font-size: 50px;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+section.not-found-section .not-found h3 {
+    font-size: 70px;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+section.not-found-section .not-found a {
+    color: #EBEBEB;
+    padding: 8px 60px;
+    border-radius: 40px;
+    transition: .4s;
+}
+
+section.not-found-section .not-found a:hover {
+    box-shadow: 2px 2px 10px 0px rgba(235, 235, 235, 0.25);
+}
+
+section.not-found-section .not-found a:focus {
+    box-shadow: 2px 2px 10px 0px rgba(235, 235, 235, 0.25) inset;
+}
+
+@media (max-width: 767px) {
+    section.not-found-section .not-found h2 {
+        font-size: 30px;
+    }
+
+    section.not-found-section .not-found h3 {
+        font-size: 48px;
+    }
+}
+
+/*##################################################### PAGE-NOT-FOUND-PAGE-CSS-END ######################################################*/

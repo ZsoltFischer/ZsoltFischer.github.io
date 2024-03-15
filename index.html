@@ -1,83 +1,316 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form with Validation</title>
-  <style>
-    form {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      max-width: 100%;
-      margin: auto;
-    }
-    label {
-      margin-bottom: 10px;
-    }
-    input[type="text"],
-    input[type="email"] {
-      padding: 8px;
-      margin-top: 4px;
-      margin-bottom: 10px;
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-      border: none;
-      border-radius: 12px;
-    }
-    button {
-      background-color: yellow; /* Default color */
-      color: black; /* Default text color */
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      font-family: 'Couture', cursive; /* Use Couture font */
-      border-radius: 12px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    button:hover {
-      background-color: #9b59b6;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Home</title>
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/Favicon.svg">
+
 </head>
+
 <body>
-  <form action="https://formspree.io/f/xdoqaerv" method="POST" onsubmit="return validateForm()">
-    <label style="margin-bottom: 10px;">
-      <input type="text" name="name" placeholder="Your name" required>
-    </label>
-    <label style="margin-bottom: 10px;">
-      <input type="email" name="email" placeholder="Your email" required>
-    </label>
-    <button type="submit">Send</button>
-  </form>
 
-  <script>
-    function validateForm() {
-      const nameInput = document.getElementsByName("name")[0];
-      const emailInput = document.getElementsByName("email")[0];
+    <!-- PARALLAX-ANIMATION -->
+    <div class="background"></div>
+    <div class="mid"></div>
+    <div class="foreground"></div>
 
-      if (nameInput.value === "") {
-        alert("Please enter your name.");
-        return false;
-      }
+    <!--##################################### HEADER-SECTION-START #####################################-->
+    <script src="header.js"></script>
+    <script src="localized_introduction.js"></script>
 
-      if (!validateEmail(emailInput.value)) {
-        alert("Please enter a valid email address.");
-        return false;
-      }
+    <!--##################################### HEADER-SECTION-END #####################################-->
 
-      return true;
-    }
+    <!--##################################### BANNER-SECTION-START #####################################-->
+    <section class="banner-section" style="overflow: hidden;">
+        <div class="container container-1200">
 
-    function validateEmail(email) {
-      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))\$/;
-      return re.test(String(email).toLowerCase());
-    }
-  </script>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="banner-text center">
+                        <h1 class="d-md-block d-none slide-right">Shaping tomorrow</h1>
+                        <p class="slide-right-fast justify-not">In our developments, we focus on Innovating
+                            AI & Spatial Tech Solutions and Autonomous Robotics for a safer future.
+                            We have Military production license, Military technical activity license,
+                            Facility Security Clearance Certificate and are proud co-founders of the Hungarian XR
+                            Coalition.</p>
+                        <img src="assets/images/hungarian-flag.svg" alt="flag" class="img-fluid" id="flag"
+                            onclick="localize()">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-8 col-md-6 order-first order-md-last">
+                    <div class="banner-image text-end position-relative">
+                        <img src="assets/images/b-img.png" alt="b-img" class="img-fluid slide-left" />
+                        <div class="banner-text p-0">
+                            <h1 class="d-md-none d-block slide-right">Step into<br> tomorrow</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--##################################### BANNER-SECTION-END #####################################-->
+
+    <!--##################################### FEATURE-SECTION-START #####################################-->
+    <section class="feature-section">
+        <div class="container container-1200">
+
+            <!-- HOVER-FLIP-CARDS -->
+            <div class="d-md-flex align-items-center justify-content-between d-none">
+                <div class="cards">
+                    <div class="content">
+                        <div class="front">
+                            <img src="assets/images/ai.svg" alt="ai" class="img-fluid" />
+                        </div>
+                        <div class="back">
+                            <img src="assets/images/hover-img1.svg" alt="ai" class="img-fluid" />
+                            <div class="flip-back-content">
+                                <h2>Artificial<br> Inteligence</h2>
+                                <a href="ai.html" class="skyblue">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="content">
+                        <div class="front">
+                            <img src="assets/images/mr.svg" alt="ai" class="img-fluid" />
+                        </div>
+                        <div class="back">
+                            <img src="assets/images/hover-img2.svg" alt="ai" class="img-fluid" />
+                            <div class="flip-back-content">
+                                <h2>Mixed<br> Reality</h2>
+                                <a href="mr.html" class="brownish-red">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="content">
+                        <div class="front">
+                            <img src="assets/images/vr.svg" alt="ai" class="img-fluid" />
+                        </div>
+                        <div class="back">
+                            <img src="assets/images/hover-img3.svg" alt="ai" class="img-fluid" />
+                            <div class="flip-back-content">
+                                <h2>Virtual<br> Reality</h2>
+                                <a href="vr.html" class="dark-blue">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="content">
+                        <div class="front">
+                            <img src="assets/images/ra.svg" alt="ai" class="img-fluid" />
+                        </div>
+                        <div class="back">
+                            <img src="assets/images/hover-img4.svg" alt="ai" class="img-fluid" />
+                            <div class="flip-back-content">
+                                <h2>Robotics & Automation</h2>
+                                <a href="robotics.html" class="dark-yellow">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="content">
+                        <div class="front">
+                            <img src="assets/images/ar.svg" alt="ai" class="img-fluid" />
+                        </div>
+                        <div class="back">
+                            <img src="assets/images/hover-img5.svg" alt="ai" class="img-fluid" />
+                            <div class="flip-back-content">
+                                <h2>Augmented<br> Reality</h2>
+                                <a href="ar.html" class="dark-purple">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE-VIEW-FEATURE-IMAGES -->
+            <div
+                class="feature-mobile-view d-flex flex-wrap align-items-center justify-content-center d-md-none d-block">
+                <div class="mobile-card-image">
+                    <a href="ai.html">
+                        <img src="assets/images/mobile-ai-2.svg" alt="ai" class="img-fluid" />
+                    </a>
+                </div>
+                <div class="mobile-card-image">
+                    <a href="mr.html">
+                        <img src="assets/images/mobile-mr-2.svg" alt="ai" class="img-fluid" />
+                    </a>
+                </div>
+                <div class="mobile-card-image">
+                    <a href="vr.html">
+                        <img src="assets/images/mobile-vr-2.svg" alt="ai" class="img-fluid" />
+                    </a>
+                </div>
+                <div class="mobile-card-image">
+                    <a href="robotics.html">
+                        <img src="assets/images/mobile-ra-2.svg" alt="ai" class="img-fluid" />
+                    </a>
+                </div>
+                <div class="mobile-card-image">
+                    <a href="ar.html">
+                        <img src="assets/images/mobile-ar-2.svg" alt="ai" class="img-fluid" />
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--##################################### FEATURE-SECTION-END #####################################-->
+
+    <!--##################################### ABOUT-SECTION-START #####################################-->
+    <section class="about-section">
+        <div class="container container-1200">
+
+            <div class="about-head">
+                <h2>About Us</h2>
+                <p>Our company primarily focuses on the development of Spatial Computing solutions (VR, AR, MR),
+                    industrial
+                    visualization technologies, autonomous robotics, along with computer vison and artificial
+                    intelligence.
+                    We have developed our team of experts and professional resources accordingly. Our goal is to be able
+                    to
+                    meet the growing needs of different industries through the applied cutting-edge technology.</p>
+            </div>
+
+            <div class="about-second-heading d-lg-none d-block">
+                <h2>Projects</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="about-cards brownish-red">
+                        <div class="about-card-text">
+                            <h2>Operation platform</h2>
+                            <p>This project is a empowering strategic decision-making, it provides data visualization,
+                                tactical simulations, and collaborative planning for efficient and precise operations.
+                            </p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="about-card-small-images">
+                                <img src="assets/images/o-ai.svg" alt="img" class="img-fluid" />
+                                <img src="assets/images/o-mr.svg" alt="img" class="img-fluid" />
+                                <img src="assets/images/o-ar.svg" alt="img" class="img-fluid" />
+                                <img src="assets/images/o-vr.svg" alt="img" class="img-fluid" />
+                            </div>
+                            <div class="about-card-btn">
+                                <a href="operating-platform.html" class="brownish-red">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-cards dark-blue">
+                        <div class="about-card-text">
+                            <h2>Scene investigation</h2>
+                            <p>Our Scene investigation project captures data with a “Spot” robot dog equipped with a 360
+                                camera for
+                                remote evaluation through Virtual Reality headsets, enhancing the efficiency and depth
+                                of investigative
+                                analysis.</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="about-card-small-images flex-container">
+                                <img src="assets/images/o-vr.svg" alt="img" class="img-fluid" />
+                                <img src="assets/images/o-ra.svg" alt="img" class="img-fluid" />
+                            </div>
+                            <div class="about-card-btn">
+                                <a href="scene-inquiry.html" class="dark-blue">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-cards dark-purple">
+                        <div class="about-card-text">
+                            <h2>Repair assistant</h2>
+                            <p>The AR Repair Assistant project enables engineers to troubleshoot complex machinery using
+                                their cell
+                                phone cameras, accessing step-by-step guidance for efficient repairs.</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="about-card-small-images">
+                                <img src="assets/images/o-ai.svg" alt="img" class="img-fluid" />
+                                <img src="assets/images/o-mr.svg" alt="img" class="img-fluid" />
+                                <img src="assets/images/o-ar.svg" alt="img" class="img-fluid" />
+                            </div>
+                            <div class="about-card-btn">
+                                <a href="repair-assistant.html" class="dark-purple">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-cards dark-yellow">
+                        <div class="about-card-text">
+                            <h2>Force meter</h2>
+                            <p>Our Force Meter project is an innovative device meticulously measuring athletes' pulling
+                                force in swimming,
+                                designed to provide enhanced training precision and elevate overall performance in
+                                aquatic endeavors.</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="about-card-small-images">
+                                <img src="assets/images/o-ra.svg" alt="img" class="img-fluid" />
+                            </div>
+                            <div class="about-card-btn">
+                                <a href="force-meter.html" class="dark-yellow">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-cards skyblue">
+                        <div class="about-card-text">
+                            <h2>Emotion recognition</h2>
+                            <p>This product leverages advanced facial recognition technology to effortlessly decipher
+                                human emotions,
+                                fostering nuanced and empathetic interactions for a more emotionally intelligent user
+                                experience.</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="about-card-small-images">
+                                <img src="assets/images/o-ai.svg" alt="img" class="img-fluid" />
+                            </div>
+                            <div class="about-card-btn">
+                                <a href="emotion-recognition.html" class="skyblue">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--##################################### ABOUT-SECTION-END #####################################-->
+
+    <!--##################################### CONTACT-SECTION-START #####################################-->
+    <div id="contact-section-container"></div>
+
+    <script src="contact-section.js"></script>
+
+    <script>
+        insertContactSection("contact-section-container");
+    </script>
+    <!--##################################### CONTACT-SECTION-END #####################################-->
+
+    <!--##################################### FOOTER-SECTION-START #####################################-->
+    <script src="footer.js"></script>
+    <!--##################################### FOOTER-SECTION-END #####################################-->
+
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+
 </body>
+
 </html>
