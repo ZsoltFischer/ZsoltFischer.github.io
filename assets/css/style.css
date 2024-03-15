@@ -502,49 +502,30 @@ section.feature-section .flip-back-content a:focus {
     box-shadow: 2px 2px 10px 0px rgba(235, 235, 235, 0.25) inset;
 }
 
-/* Base styles for all devices */
-.mobile-card-image img {
-    width: 100%; /* Adjust width as needed */
-    max-width: 93px; /* Adjust as needed */
-    margin: 0 16px 16px 0;
-    box-shadow: 0px 8.455px 16.909px 0px rgba(171, 171, 171, 0.20);
-    border-radius: 16px;
-  }
-  
-  /* For Windows and Android devices (assuming they support SVG) */
-  @media screen and (-ms-high-contrast: none), screen and (-ms-high-contrast: active) {
-    /*  Replace 'assets/images' with your actual image path  */
-    .mobile-card-image img {
-      content: url("assets/images/mobile-ai-2.svg") /* and so on for other images */;
-    }
-  }
-  
-  /* For iPhones and Safari browsers */
-  @media only screen and (device-width: 768px) and (max-device-width: 1024px) {
-    /*  Replace 'assets/images' with your actual image path  */
-    .mobile-card-image img {
-      content: url("assets/images/mobile-ai-2.png") /* and so on for other images */;
-    }
-  }
-  
-  /* Rest of your media query for mobile layout (320px to 767px) */
-  @media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .feature-mobile-view {
-      width: 100%;
-      max-width: 330px;
-      margin: auto;
+        width: 100%;
+        max-width: 330px;
+        margin: auto;
     }
-  
+
     .mobile-card-image:nth-child(3) img,
     .mobile-card-image:last-child img {
-      margin-right: 0;
+        margin-right: 0;
     }
-  
+
+    .mobile-card-image img {
+        width: 100%;
+        max-width: 93px;
+        margin: 0 16px 16px 0;
+        box-shadow: 0px 8.455px 16.909px 0px rgba(171, 171, 171, 0.20);
+        border-radius: 16px;
+    }
+
     section.feature-section {
-      padding: 40px 0 48px 0;
+        padding: 40px 0 48px 0;
     }
-  }
-  
+}  
 
 @media (min-width: 768px) and (max-width: 991px) {
     section.feature-section {
